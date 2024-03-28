@@ -1,5 +1,5 @@
 <template>
-    <header class="sticky top-0 bg-zinc-900/60 backdrop-blur">
+    <header class="sticky top-0 bg-zinc-900/70 backdrop-blur z-50 header-animation">
         <div
             class="flex justify-between items-center mx-20 py-8 relative after:h-px after:bg-white after:w-full after:absolute after:bottom-0"
         >
@@ -27,4 +27,18 @@ function handleSwitchChange() {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@keyframes fade-in {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header-animation {
+    animation: fade-in 2s ease;
+}
+</style>

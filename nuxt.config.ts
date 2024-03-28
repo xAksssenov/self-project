@@ -15,6 +15,9 @@ export default defineNuxtConfig({
         },
     },
     modules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', 'nuxt-svgo'],
+    svgo: {
+        autoImportPath: '~/assets/icons/',
+    },
     runtimeConfig: {
         public: {
             apiBase: 'http://localhost:3000',
