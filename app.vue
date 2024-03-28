@@ -1,6 +1,9 @@
 <template>
-    <NuxtPage />
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
 </template>
+
 <style lang="scss">
 * {
     padding: 0;
@@ -16,11 +19,13 @@ textarea {
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    background-color: rgb(24 24 27);
 }
 
 body {
     margin: 0;
     font-family: Goldman, sans-serif;
+    color: white;
 }
 
 h1 {
@@ -44,7 +49,6 @@ h5 {
 }
 
 a {
-    color: black;
     text-decoration: none;
     outline: none;
 }
