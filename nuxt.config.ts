@@ -7,6 +7,13 @@ export default defineNuxtConfig({
         },
     ],
     devtools: { enabled: true },
+    css: ['~/assets/scss/main.css'],
+    postcss: {
+        plugins: {
+            tailwindcss: {},
+            autoprefixer: {},
+        },
+    },
     modules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', 'nuxt-svgo'],
     runtimeConfig: {
         public: {

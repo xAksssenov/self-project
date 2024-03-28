@@ -1,10 +1,10 @@
 {
     "env": {
         "node": true
-    },    
+    },
     "plugins": [
         "prettier"
-    ],    
+    ],
     "extends": [
         "@nuxt/eslint-config",
         "prettier"
