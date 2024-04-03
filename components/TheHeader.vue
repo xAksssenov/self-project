@@ -39,6 +39,6 @@ function handleSwitchChange() {
 }
 
 .header-animation {
-    animation: fade-in 2s ease;
+    animation: fade-in 1.5s ease;
 }
 </style>

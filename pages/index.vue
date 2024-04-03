@@ -4,6 +4,21 @@
             <SvgoIconBackground class="img ml-auto svg-animation-bg" filled />
             <SvgoIconTitle class="absolute left-24 bottom-40 svg-animation-text" filled />
         </div>
+        <div class="flex mx-28 justify-between items-center">
+            <div class="flex flex-col items-end w-6/12 relative">
+                <h1 class="text-7xl w-fit">Привет, меня зовут Кирилл</h1>
+                <p class="my-1 text-3xl w-fit text-red-300">Aksenov Kirill</p>
+                <SvgoAboutMe class="me absolute -top-36 -right-72" filled />
+                <h3 class="text-5xl text-end mt-8 text-4xl">
+                    Я студент 2 курса Московского Политеха. Учусь на направлении
+                    веб-разработка, также заканчивал курс Дополнительного профессионального
+                    образования по той же специальности. Разработкой занимаюсь не первый год и
+                    за это время смог поучавстовать в различных проектах, о которых вы можете
+                    прочитать ниже.
+                </h3>
+            </div>
+            <img src="/assets/img/photo.png" alt="photo" />
+        </div>
     </div>
 </template>
 
@@ -24,7 +39,11 @@ setTimeout(() => {
 .nuxt-icon.img {
     width: 100rem;
     height: 70rem;
-    align-self: flex-end;
+}
+
+.nuxt-icon.me {
+    width: 35rem;
+    height: 25rem;
 }
 
 @keyframes fade-bg {
@@ -40,7 +59,7 @@ setTimeout(() => {
 }
 
 .svg-animation-bg {
-    animation: fade-bg 2s ease;
+    animation: fade-bg 1.5s ease;
 }
 
 @keyframes fade-text {
@@ -60,7 +79,7 @@ setTimeout(() => {
 }
 
 .svg-animation-text {
-    animation: fade-text 3s ease;
+    animation: fade-text 2.5s ease;
 }
 
 .loading {
