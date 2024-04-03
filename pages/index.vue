@@ -5,7 +5,7 @@
             <SvgoIconTitle class="absolute left-24 bottom-40 svg-animation-text" filled />
         </div>
         <div class="flex mx-28 justify-between items-center">
-            <div class="flex flex-col items-end w-6/12 relative">
+            <div class="title-animation flex flex-col items-end w-6/12 relative">
                 <h1 class="text-7xl w-fit">Привет, меня зовут Кирилл</h1>
                 <p class="my-1 text-3xl w-fit text-red-300">Aksenov Kirill</p>
                 <SvgoAboutMe class="me absolute -top-36 -right-72" filled />
@@ -17,7 +17,7 @@
                     прочитать ниже.
                 </h3>
             </div>
-            <img src="/assets/img/photo.png" alt="photo" />
+            <img class="img-animation" src="/assets/img/photo.png" alt="photo" />
         </div>
     </div>
 </template>
@@ -28,9 +28,49 @@ const loading = ref(true)
 setTimeout(() => {
     loading.value = false
 }, 1000)
+
+function scrollFirst() {
+    const move = document.querySelectorAll('.title-animation, .img-animation')
+    for (let i = 0; i < move.length; i++) {
+        const windowHeight = window.innerHeight
+        const elementTop = move[i].getBoundingClientRect().top
+        const elementVisible = 150
+        if (elementTop < windowHeight - elementVisible) {
+            move[i].classList.add('active')
+        } else {
+            move[i].classList.remove('active')
+        }
+    }
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', scrollFirst)
+})
 </script>
 
 <style lang="scss" scoped>
+.title-animation {
+    transform: translateX(-220px);
+    opacity: 0;
+    transition: 2.5s all ease;
+}
+
+.title-animation.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.img-animation {
+    transform: translateX(220px);
+    opacity: 0;
+    transition: 2.5s all ease;
+}
+
+.img-animation.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .nuxt-icon {
     width: 100rem;
     height: 50rem;
