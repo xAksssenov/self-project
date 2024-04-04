@@ -27,6 +27,31 @@
                 <RunningLine class="running-animation-second" />
             </div>
         </div>
+        <div class="flex mx-28 justify-between items-center">
+            <div class="title-animation flex flex-col items-center w-6/12 relative">
+                <h3 class="text-5xl mb-8 text-4xl text-end">Список навыков/умений:</h3>
+                <SvgoSkillsVector class="me absolute top-8 -right-72" filled />
+                <div class="grid gap-8 grid-cols-2 justify-items-center">
+                    <ButtonItem>HTML</ButtonItem>
+                    <ButtonItem>JS/TS</ButtonItem>
+                    <ButtonItem>CSS/SCSS/SASS</ButtonItem>
+                    <ButtonItem>GIT</ButtonItem>
+                    <ButtonItem>TAILWIND</ButtonItem>
+                    <ButtonItem>VUE</ButtonItem>
+                    <ButtonItem>NUXT</ButtonItem>
+                    <ButtonItem>FIGMA/TILDA</ButtonItem>
+                </div>
+            </div>
+            <img class="img-animation" src="/assets/img/photo.png" alt="photo" />
+        </div>
+        <div class="lines-animation">
+            <div class="rotate-3">
+                <RunningLine class="running-animation-first" />
+            </div>
+            <div class="-rotate-3">
+                <RunningLine class="running-animation-second" />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -38,7 +63,9 @@ setTimeout(() => {
 }, 1000)
 
 function scrollFirst() {
-    const move = document.querySelectorAll('.title-animation, .img-animation, .lines-animation')
+    const move = document.querySelectorAll(
+        '.title-animation, .img-animation, .lines-animation',
+    )
     for (let i = 0; i < move.length; i++) {
         const windowHeight = window.innerHeight
         const elementTop = move[i].getBoundingClientRect().top
