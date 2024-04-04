@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="flex mx-28 justify-between items-center">
-            <div class="title-animation flex flex-col items-center w-6/12 relative">
+            <div class="buttons-animation flex flex-col items-center w-6/12 relative">
                 <h3 class="text-5xl mb-8 text-4xl text-end">Список навыков/умений:</h3>
                 <SvgoSkillsVector class="me absolute top-8 -right-72" filled />
                 <div class="grid gap-8 grid-cols-2 justify-items-center">
@@ -42,7 +42,7 @@
                     <ButtonItem>FIGMA/TILDA</ButtonItem>
                 </div>
             </div>
-            <img class="img-animation" src="/assets/img/photo.png" alt="photo" />
+            <CubeItem />
         </div>
         <div class="lines-animation">
             <div class="rotate-3">
@@ -64,7 +64,7 @@ setTimeout(() => {
 
 function scrollFirst() {
     const move = document.querySelectorAll(
-        '.title-animation, .img-animation, .lines-animation',
+        '.title-animation, .img-animation, .lines-animation, .buttons-animation',
     )
     for (let i = 0; i < move.length; i++) {
         const windowHeight = window.innerHeight
@@ -84,6 +84,29 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+.loading {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+        visibility 0s 2s,
+        opacity 2s ease;
+}
+
+.nuxt-icon {
+    width: 100rem;
+    height: 50rem;
+}
+
+.nuxt-icon.img {
+    width: 100rem;
+    height: 70rem;
+}
+
+.nuxt-icon.me {
+    width: 35rem;
+    height: 25rem;
+}
+
 .title-animation {
     transform: translateX(-220px);
     opacity: 0;
@@ -106,19 +129,24 @@ onMounted(() => {
     opacity: 1;
 }
 
-.nuxt-icon {
-    width: 100rem;
-    height: 50rem;
+.lines-animation {
+    opacity: 0;
+    transition: opacity 2s ease;
 }
 
-.nuxt-icon.img {
-    width: 100rem;
-    height: 70rem;
+.lines-animation.active {
+    opacity: 1;
 }
 
-.nuxt-icon.me {
-    width: 35rem;
-    height: 25rem;
+.buttons-animation {
+    transform: scale(0.3);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.buttons-animation.active {
+    transform: scale(1);
+    opacity: 1;
 }
 
 @keyframes fade-bg {
@@ -157,14 +185,6 @@ onMounted(() => {
     animation: fade-text 2.5s ease;
 }
 
-.loading {
-    visibility: hidden;
-    opacity: 0;
-    transition:
-        visibility 0s 2s,
-        opacity 2s ease;
-}
-
 @keyframes run-one {
     0% {
         transform: translateX(24.35%);
@@ -191,14 +211,5 @@ onMounted(() => {
 
 .running-animation-second {
     animation: run-two 4s linear infinite;
-}
-
-.lines-animation {
-    opacity: 0;
-    transition: opacity 2s ease;
-}
-
-.lines-animation.active {
-    opacity: 1;
 }
 </style>

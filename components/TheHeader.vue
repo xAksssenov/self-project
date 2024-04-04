@@ -4,7 +4,7 @@
             class="flex justify-between items-center mx-20 py-8 relative after:h-px after:bg-white after:w-full after:absolute after:bottom-0"
         >
             <div class="flex gap-20">
-                <NuxtLink class="text-4xl text-red-300" href="#">Aksenov Kirill</NuxtLink>
+                <NuxtLink class="text-4xl text-red-300" href="/">Aksenov Kirill</NuxtLink>
                 <NuxtLink class="text-4xl" href="#">
                     Frontend Developer/Designer UI/UX
                 </NuxtLink>
