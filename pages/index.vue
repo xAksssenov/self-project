@@ -19,6 +19,14 @@
             </div>
             <img class="img-animation" src="/assets/img/photo.png" alt="photo" />
         </div>
+        <div class="lines-animation">
+            <div class="-rotate-3">
+                <RunningLine class="running-animation-first" />
+            </div>
+            <div class="rotate-3">
+                <RunningLine class="running-animation-second" />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -30,7 +38,7 @@ setTimeout(() => {
 }, 1000)
 
 function scrollFirst() {
-    const move = document.querySelectorAll('.title-animation, .img-animation')
+    const move = document.querySelectorAll('.title-animation, .img-animation, .lines-animation')
     for (let i = 0; i < move.length; i++) {
         const windowHeight = window.innerHeight
         const elementTop = move[i].getBoundingClientRect().top
@@ -128,5 +136,42 @@ onMounted(() => {
     transition:
         visibility 0s 2s,
         opacity 2s ease;
+}
+
+@keyframes run-one {
+    0% {
+        transform: translateX(24.35%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.running-animation-first {
+    animation: run-one 4s linear infinite;
+}
+
+@keyframes run-two {
+    0% {
+        transform: translateX(-24.35%);
+    }
+
+    100% {
+        transform: translateX(20%);
+    }
+}
+
+.running-animation-second {
+    animation: run-two 4s linear infinite;
+}
+
+.lines-animation {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.lines-animation.active {
+    opacity: 1;
 }
 </style>
