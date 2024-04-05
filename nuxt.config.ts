@@ -14,7 +14,15 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
-    modules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module', 'nuxt-svgo'],
+    modules: [
+        '@nuxtjs/eslint-module',
+        '@nuxtjs/stylelint-module',
+        'nuxt-svgo',
+        'vue3-carousel-nuxt'
+    ],
+    carousel: {
+        prefix: 'Nuxt',
+    },
     svgo: {
         autoImportPath: '~/assets/icons/',
     },

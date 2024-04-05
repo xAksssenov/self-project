@@ -44,6 +44,9 @@
             </div>
             <CubeItem />
         </div>
+        <div class="mt-52">
+            <SliderCarousel />
+        </div>
         <div class="lines-animation">
             <div class="rotate-3">
                 <RunningLine class="running-animation-first" />

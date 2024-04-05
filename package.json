@@ -30,7 +30,8 @@
     "vitest": "^1.0.4",
     "vitest-environment-nuxt": "^1.0.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue3-carousel-nuxt": "^1.1.1"
   },
   "dependencies": {
     "@vuelidate/core": "^2.0.3",
