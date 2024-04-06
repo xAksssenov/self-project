@@ -2,9 +2,7 @@
     <NuxtCarousel :items-to-show="3.95" :wrap-around="true" :transition="500">
         <NuxtSlide v-for="slide in slides" :key="slide.index" :index="slide.index">
             <img class="rounded-3xl" :src="slide.image" :alt="'Slide ' + slide.index" />
-            <ButtonItem class="py-2 px-10">
-                <a class="text-2xl" href="#">Подробнее</a>
-            </ButtonItem>
+            <ButtonItem class="text-2xl py-3 px-10">Подробнее</ButtonItem>
         </NuxtSlide>
     </NuxtCarousel>
 </template>
@@ -28,6 +26,8 @@ const slides = [
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    gap: 1rem;
 }
 
 .carousel__viewport {

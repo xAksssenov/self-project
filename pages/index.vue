@@ -6,10 +6,10 @@
         </div>
         <div class="flex mx-28 justify-between items-center">
             <div class="title-animation flex flex-col items-end w-6/12 relative">
-                <h1 class="text-7xl w-fit">Привет, меня зовут Кирилл</h1>
+                <h2 class="text-7xl w-fit">Привет, меня зовут Кирилл</h2>
                 <p class="my-1 text-3xl w-fit text-red-300">Aksenov Kirill</p>
-                <SvgoAboutMe class="me absolute -top-36 -right-72" filled />
-                <h3 class="text-5xl text-end mt-8 text-4xl">
+                <SvgoIconAbout class="me absolute -top-36 -right-72" filled />
+                <h3 class="text-5xl text-end mt-8">
                     Я студент 2 курса Московского Политеха. Учусь на направлении
                     веб-разработка, также заканчивал курс Дополнительного профессионального
                     образования по той же специальности. Разработкой занимаюсь не первый год и
@@ -28,21 +28,7 @@
             </div>
         </div>
         <div class="flex mx-28 justify-between items-center">
-            <div class="buttons-animation flex flex-col items-center w-6/12 relative">
-                <h3 class="text-5xl mb-8 text-4xl text-end">Список навыков/умений:</h3>
-                <SvgoSkillsVector class="me absolute top-8 -right-72" filled />
-                <div class="grid gap-8 grid-cols-2 justify-items-center">
-                    <ButtonItem>HTML</ButtonItem>
-                    <ButtonItem>JS/TS</ButtonItem>
-                    <ButtonItem>CSS/SCSS/SASS</ButtonItem>
-                    <ButtonItem>GIT</ButtonItem>
-                    <ButtonItem>TAILWIND</ButtonItem>
-                    <ButtonItem>VUE</ButtonItem>
-                    <ButtonItem>NUXT</ButtonItem>
-                    <ButtonItem>FIGMA/TILDA</ButtonItem>
-                </div>
-            </div>
-            <CubeItem />
+            <SkillsItem />
         </div>
         <div class="slider-animation mt-52">
             <SliderCarousel v-if="isLoaded" />
@@ -58,6 +44,9 @@
         <div class="lines-animation my-20 flex relative">
             <SvgoIconBackground class="img ml-auto" filled />
             <SvgoIconTitleSecond class="absolute left-24 bottom-40" filled />
+        </div>
+        <div class="buttons-animation flex flex-col w-6/12 mx-auto">
+            <AnswerItem />
         </div>
     </div>
 </template>
@@ -97,7 +86,7 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .loading {
     visibility: hidden;
     opacity: 0;
