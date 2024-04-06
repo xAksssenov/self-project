@@ -79,4 +79,8 @@ ol,
 ul {
     list-style: none;
 }
+
+.carousel__viewport {
+    overflow: visible;
+}
 </style>

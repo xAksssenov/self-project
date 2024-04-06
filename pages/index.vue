@@ -2,7 +2,7 @@
     <div class="mx-20" :class="{ loading: loading }">
         <div v-if="!loading" class="my-20 flex relative">
             <SvgoIconBackground class="img ml-auto svg-animation-bg" filled />
-            <SvgoIconTitle class="absolute left-24 bottom-40 svg-animation-text" filled />
+            <SvgoIconTitle class="svg-animation-text absolute left-24 bottom-40" filled />
         </div>
         <div class="flex mx-28 justify-between items-center">
             <div class="title-animation flex flex-col items-end w-6/12 relative">
@@ -44,8 +44,8 @@
             </div>
             <CubeItem />
         </div>
-        <div class="mt-52">
-            <SliderCarousel />
+        <div class="slider-animation mt-52">
+            <SliderCarousel v-if="isLoaded" />
         </div>
         <div class="lines-animation">
             <div class="rotate-3">
@@ -54,6 +54,10 @@
             <div class="-rotate-3">
                 <RunningLine class="running-animation-second" />
             </div>
+        </div>
+        <div class="lines-animation my-20 flex relative">
+            <SvgoIconBackground class="img ml-auto" filled />
+            <SvgoIconTitleSecond class="absolute left-24 bottom-40" filled />
         </div>
     </div>
 </template>
@@ -65,10 +69,17 @@ setTimeout(() => {
     loading.value = false
 }, 1000)
 
-function scrollFirst() {
+const isLoaded = ref(false)
+
+onMounted(() => {
+    isLoaded.value = true
+})
+
+function scroll() {
     const move = document.querySelectorAll(
-        '.title-animation, .img-animation, .lines-animation, .buttons-animation',
+        '.title-animation, .img-animation, .lines-animation, .buttons-animation, .slider-animation',
     )
+
     for (let i = 0; i < move.length; i++) {
         const windowHeight = window.innerHeight
         const elementTop = move[i].getBoundingClientRect().top
@@ -82,7 +93,7 @@ function scrollFirst() {
 }
 
 onMounted(() => {
-    window.addEventListener('scroll', scrollFirst)
+    window.addEventListener('scroll', scroll)
 })
 </script>
 
@@ -113,7 +124,7 @@ onMounted(() => {
 .title-animation {
     transform: translateX(-220px);
     opacity: 0;
-    transition: 2.5s all ease;
+    transition: 2s all ease;
 }
 
 .title-animation.active {
@@ -124,7 +135,7 @@ onMounted(() => {
 .img-animation {
     transform: translateX(220px);
     opacity: 0;
-    transition: 2.5s all ease;
+    transition: 2s all ease;
 }
 
 .img-animation.active {
@@ -149,6 +160,17 @@ onMounted(() => {
 
 .buttons-animation.active {
     transform: scale(1);
+    opacity: 1;
+}
+
+.slider-animation {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.slider-animation.active {
+    transform: translateX(0%);
     opacity: 1;
 }
 

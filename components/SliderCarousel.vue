@@ -1,31 +1,45 @@
 <template>
     <NuxtCarousel :items-to-show="3.95" :wrap-around="true" :transition="500">
         <NuxtSlide :index="1">
-            <NuxtLink href="#">
-                <img class="rounded-3xl" src="/assets/img/project-1.jpg" alt="Slide 1" />
-            </NuxtLink>
+            <img class="rounded-3xl" src="/assets/img/project-1.jpg" alt="Slide 1" />
+            <button
+                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
+            >
+                <a class="text-2xl" href="#">Подробнее</a>
+            </button>
         </NuxtSlide>
         <NuxtSlide :index="2">
-            <NuxtLink href="#">
-                <img class="rounded-3xl" src="/assets/img/project-2.jpg" alt="Slide 2" />
-            </NuxtLink>
+            <img class="rounded-3xl" src="/assets/img/project-2.jpg" alt="Slide 2" />
+            <button
+                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
+            >
+                <a class="text-2xl" href="#">Подробнее</a>
+            </button>
         </NuxtSlide>
         <NuxtSlide :index="3">
-            <NuxtLink href="#">
-                <img class="rounded-3xl" src="/assets/img/project-3.jpg" alt="Slide 3" />
-            </NuxtLink>
+            <img class="rounded-3xl" src="/assets/img/project-3.jpg" alt="Slide 3" />
+            <button
+                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
+            >
+                <a class="text-2xl" href="#">Подробнее</a>
+            </button>
         </NuxtSlide>
         <NuxtSlide :index="4">
-            <NuxtLink href="#">
-                <img class="rounded-3xl" src="/assets/img/project-4.jpg" alt="Slide 4" />
-            </NuxtLink>
+            <img class="rounded-3xl" src="/assets/img/project-4.jpg" alt="Slide 4" />
+            <button
+                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
+            >
+                <a class="text-2xl" href="#">Подробнее</a>
+            </button>
         </NuxtSlide>
         <NuxtSlide :index="5">
-            <NuxtLink href="#">
-                <img class="rounded-3xl" src="/assets/img/project-5.jpg" alt="Slide 5" />
-            </NuxtLink>
+            <img class="rounded-3xl" src="/assets/img/project-5.jpg" alt="Slide 5" />
+            <button
+                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
+            >
+                <a class="text-2xl" href="#">Подробнее</a>
+            </button>
         </NuxtSlide>
-        <NuxtNavigation />
     </NuxtCarousel>
 </template>
 
@@ -37,6 +51,9 @@
     opacity: 0.9;
     transform: rotateY(-20deg) scale(0.9);
     border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .carousel__viewport {
