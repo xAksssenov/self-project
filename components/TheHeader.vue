@@ -4,15 +4,38 @@
             class="flex justify-between items-center mx-20 py-8 relative after:h-px after:bg-white after:w-full after:absolute after:bottom-0"
         >
             <div class="flex gap-20">
-                <NuxtLink class="text-4xl text-red-300" href="/">Aksenov Kirill</NuxtLink>
-                <NuxtLink class="text-4xl" href="#">
+                <NuxtLink
+                    class="text-4xl text-red-300 transition-transform duration-500 ease transform hover:-translate-y-2"
+                    href="/"
+                >
+                    Aksenov Kirill
+                </NuxtLink>
+                <NuxtLink
+                    class="text-4xl transition-transform duration-500 ease transform hover:-translate-y-2"
+                    href="/"
+                >
                     Frontend Developer/Designer UI/UX
                 </NuxtLink>
             </div>
             <div class="flex gap-10">
-                <NuxtLink class="text-4xl" href="#">About</NuxtLink>
-                <NuxtLink class="text-4xl" href="#">Works</NuxtLink>
-                <NuxtLink class="text-4xl" href="#">Contact</NuxtLink>
+                <button
+                    class="text-4xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    @click="handleAboutClick"
+                >
+                    About
+                </button>
+                <button
+                    class="text-4xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    @click="handleProjectsClick"
+                >
+                    Projects
+                </button>
+                <button
+                    class="text-4xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    @click="handleContactClick"
+                >
+                    Contact
+                </button>
             </div>
             <SwitchCase :model-value="switchValue" @update:model-value="handleSwitchChange" />
         </div>
@@ -24,6 +47,32 @@ const switchValue = ref(false)
 
 function handleSwitchChange() {
     switchValue.value = !switchValue.value
+}
+
+function scrollToElement(elementId: string) {
+    const element = document.getElementById(elementId)
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+}
+
+function scrollToElementProject(elementId: string) {
+    const element = document.getElementById(elementId)
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'end' })
+    }
+}
+
+function handleAboutClick() {
+    scrollToElement('about')
+}
+
+function handleProjectsClick() {
+    scrollToElementProject('projects')
+}
+
+function handleContactClick() {
+    scrollToElement('contact')
 }
 </script>
 

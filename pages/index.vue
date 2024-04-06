@@ -5,7 +5,7 @@
             <SvgoIconTitle class="svg-animation-text absolute left-24 bottom-40" filled />
         </div>
         <div class="flex mx-28 justify-between items-center">
-            <div class="title-animation flex flex-col items-end w-6/12 relative">
+            <div id="about" class="title-animation flex flex-col items-end w-6/12 relative">
                 <h2 class="text-7xl w-fit">Привет, меня зовут Кирилл</h2>
                 <p class="my-1 text-3xl w-fit text-red-300">Aksenov Kirill</p>
                 <SvgoIconAbout class="me absolute -top-36 -right-72" filled />
@@ -34,7 +34,7 @@
             <SliderCarousel v-if="isLoaded" />
         </div>
         <div class="lines-animation">
-            <div class="rotate-3">
+            <div id="projects" class="rotate-3">
                 <RunningLine class="running-animation-first" />
             </div>
             <div class="-rotate-3">
@@ -48,7 +48,10 @@
         <div class="buttons-animation flex flex-col w-6/12 mx-auto">
             <AnswerItem />
         </div>
-        <div class="lines-animation my-28 m-auto flex flex-col items-center w-6/12 relative">
+        <div
+            id="contact"
+            class="lines-animation my-28 m-auto flex flex-col items-center w-6/12 relative"
+        >
             <h3 class="text-5xl m-8 text-center">
                 Вам понравился мой сайт? Обязательно свяжитесь со мной любым удобным способом
             </h3>
@@ -189,6 +192,7 @@ onMounted(() => {
 
 .svg-animation-bg {
     animation: fade-bg 1.5s ease;
+    scroll-padding-top: 100px;
 }
 
 @keyframes fade-text {
