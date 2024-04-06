@@ -1,39 +1,7 @@
 <template>
     <NuxtCarousel :items-to-show="3.95" :wrap-around="true" :transition="500">
-        <NuxtSlide :index="1">
-            <img class="rounded-3xl" src="/assets/img/project-1.jpg" alt="Slide 1" />
-            <button
-                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
-            >
-                <a class="text-2xl" href="#">Подробнее</a>
-            </button>
-        </NuxtSlide>
-        <NuxtSlide :index="2">
-            <img class="rounded-3xl" src="/assets/img/project-2.jpg" alt="Slide 2" />
-            <button
-                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
-            >
-                <a class="text-2xl" href="#">Подробнее</a>
-            </button>
-        </NuxtSlide>
-        <NuxtSlide :index="3">
-            <img class="rounded-3xl" src="/assets/img/project-3.jpg" alt="Slide 3" />
-            <button
-                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
-            >
-                <a class="text-2xl" href="#">Подробнее</a>
-            </button>
-        </NuxtSlide>
-        <NuxtSlide :index="4">
-            <img class="rounded-3xl" src="/assets/img/project-4.jpg" alt="Slide 4" />
-            <button
-                class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
-            >
-                <a class="text-2xl" href="#">Подробнее</a>
-            </button>
-        </NuxtSlide>
-        <NuxtSlide :index="5">
-            <img class="rounded-3xl" src="/assets/img/project-5.jpg" alt="Slide 5" />
+        <NuxtSlide v-for="slide in slides" :key="slide.index" :index="slide.index">
+            <img class="rounded-3xl" :src="slide.image" :alt="'Slide ' + slide.index" />
             <button
                 class="py-2 px-10 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease-in-out transform hover:scale-110"
             >
@@ -43,7 +11,15 @@
     </NuxtCarousel>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const slides = [
+    { index: 1, image: '/project-1.jpg' },
+    { index: 2, image: '/project-2.jpg' },
+    { index: 3, image: '/project-3.jpg' },
+    { index: 4, image: '/project-4.jpg' },
+    { index: 5, image: '/project-5.jpg' },
+]
+</script>
 
 <style lang="scss" scoped>
 .carousel__slide {
