@@ -48,6 +48,13 @@
         <div class="buttons-animation flex flex-col w-6/12 mx-auto">
             <AnswerItem />
         </div>
+        <div class="lines-animation my-28 m-auto flex flex-col items-center w-6/12 relative">
+            <h3 class="text-5xl m-8 text-center">
+                Вам понравился мой сайт? Обязательно свяжитесь со мной любым удобным способом
+            </h3>
+            <SvgoIconEnd class="end absolute top-24 right-20" filled />
+            <AnimatedButton />
+        </div>
     </div>
 </template>
 
@@ -108,6 +115,11 @@ onMounted(() => {
 .nuxt-icon.me {
     width: 35rem;
     height: 25rem;
+}
+
+.nuxt-icon.end {
+    width: 12rem;
+    height: 12rem;
 }
 
 .title-animation {
