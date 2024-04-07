@@ -17,7 +17,7 @@
                     прочитать ниже.
                 </h3>
             </div>
-            <img class="img-animation" src="/assets/img/photo.png" alt="photo" />
+            <img class="img-animation" src="/photo.png" alt="photo" />
         </div>
         <div class="lines-animation">
             <div class="-rotate-3">
