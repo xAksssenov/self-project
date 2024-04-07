@@ -25,6 +25,7 @@
                     About
                 </button>
                 <button
+                    v-if="$route.path !== '/contact'"
                     class="text-4xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
                     @click="handleProjectsClick"
                 >
@@ -89,5 +90,6 @@ function handleContactClick() {
 
 .header-animation {
     animation: fade-in 1.5s ease;
+    transition: transform 0.5s ease;
 }
 </style>

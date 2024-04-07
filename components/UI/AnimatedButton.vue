@@ -1,10 +1,11 @@
 <template>
-    <button
-        class="w-96 h-40 text-5xl m-4 rounded-3xl border-2 border-solid border-red-300 cursor-pointer"
+    <NuxtLink
+        href="/contact"
+        class="link py-10 px-24 text-5xl m-4 rounded-3xl border-2 border-solid border-red-300 cursor-pointer"
     >
         Contact me
         <SvgoIconBell class="bell" filled />
-    </button>
+    </NuxtLink>
 </template>
 
 <script setup lang="ts"></script>
@@ -50,7 +51,7 @@
     }
 }
 
-button {
+.link {
     animation: bell 2s linear infinite;
 }
 </style>

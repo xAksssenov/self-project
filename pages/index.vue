@@ -1,10 +1,10 @@
 <template>
-    <div class="mx-20" :class="{ loading: loading }">
-        <div v-if="!loading" class="my-20 flex relative">
+    <div class="mx-20">
+        <section v-if="!loading" class="my-20 flex relative" :class="{ loading: loading }">
             <SvgoIconBackground class="img ml-auto svg-animation-bg" filled />
             <SvgoIconTitle class="svg-animation-text absolute left-24 bottom-40" filled />
-        </div>
-        <div class="flex mx-28 justify-between items-center">
+        </section>
+        <section class="flex mx-28 justify-between items-center">
             <div id="about" class="title-animation flex flex-col items-end w-6/12 relative">
                 <h2 class="text-7xl w-fit">Привет, меня зовут Кирилл</h2>
                 <p class="my-1 text-3xl w-fit text-red-300">Aksenov Kirill</p>
@@ -18,37 +18,37 @@
                 </h3>
             </div>
             <img class="img-animation" src="/photo.png" alt="photo" />
-        </div>
-        <div class="lines-animation">
+        </section>
+        <section class="lines-animation">
             <div class="-rotate-3">
                 <RunningLine class="running-animation-first" />
             </div>
             <div class="rotate-3">
                 <RunningLine class="running-animation-second" />
             </div>
-        </div>
-        <div class="flex mx-28 justify-between items-center">
+        </section>
+        <section class="flex mx-28 justify-between items-center">
             <SkillsItem />
-        </div>
-        <div class="slider-animation mt-52">
+        </section>
+        <section class="slider-animation mt-52">
             <SliderCarousel v-if="isLoaded" />
-        </div>
-        <div class="lines-animation">
+        </section>
+        <section class="lines-animation">
             <div id="projects" class="rotate-3">
                 <RunningLine class="running-animation-first" />
             </div>
             <div class="-rotate-3">
                 <RunningLine class="running-animation-second" />
             </div>
-        </div>
-        <div class="lines-animation my-20 flex relative">
+        </section>
+        <section class="lines-animation my-20 flex relative">
             <SvgoIconBackground class="img ml-auto" filled />
             <SvgoIconTitleSecond class="absolute left-24 bottom-40" filled />
-        </div>
-        <div class="buttons-animation flex flex-col w-6/12 mx-auto">
+        </section>
+        <section class="buttons-animation flex flex-col w-6/12 mx-auto">
             <AnswerItem />
-        </div>
-        <div
+        </section>
+        <section
             id="contact"
             class="lines-animation my-28 m-auto flex flex-col items-center w-6/12 relative"
         >
@@ -57,7 +57,7 @@
             </h3>
             <SvgoIconEnd class="end absolute top-24 right-20" filled />
             <AnimatedButton />
-        </div>
+        </section>
     </div>
 </template>
 
@@ -66,13 +66,9 @@ const loading = ref(true)
 
 setTimeout(() => {
     loading.value = false
-}, 1000)
+}, 500)
 
 const isLoaded = ref(false)
-
-onMounted(() => {
-    isLoaded.value = true
-})
 
 function scroll() {
     const move = document.querySelectorAll(
@@ -93,6 +89,7 @@ function scroll() {
 
 onMounted(() => {
     window.addEventListener('scroll', scroll)
+    isLoaded.value = true
 })
 </script>
 
@@ -191,8 +188,7 @@ onMounted(() => {
 }
 
 .svg-animation-bg {
-    animation: fade-bg 1.5s ease;
-    scroll-padding-top: 100px;
+    animation: fade-bg 1s ease;
 }
 
 @keyframes fade-text {
@@ -212,7 +208,7 @@ onMounted(() => {
 }
 
 .svg-animation-text {
-    animation: fade-text 2.5s ease;
+    animation: fade-text 2s ease;
 }
 
 @keyframes run-one {
