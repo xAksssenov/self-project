@@ -27,7 +27,8 @@
 
     .nuxt-icon.developer,
     .nuxt-icon.connect,
-    .nuxt-icon.links {
+    .nuxt-icon.links,
+    .nuxt-icon.svg {
         path {
             fill: $dark-color;
         }

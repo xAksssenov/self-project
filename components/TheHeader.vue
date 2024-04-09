@@ -40,7 +40,13 @@
                     Contact
                 </button>
             </div>
-            <SwitchCase :model-value="switchValue" @update:model-value="handleSwitchChange" />
+            <div class="flex gap-10">
+                <SvgoIconSwitch class="svg" filled />
+                <SwitchCase
+                    :model-value="switchValue"
+                    @update:model-value="handleSwitchChange"
+                />
+            </div>
         </div>
     </header>
 </template>
@@ -107,5 +113,10 @@ onMounted(() => {
 .header-animation {
     animation: fade-in 1.5s ease;
     transition: all 0.5s ease;
+}
+
+.nuxt-icon.svg {
+    width: 4rem;
+    height: 4rem;
 }
 </style>
