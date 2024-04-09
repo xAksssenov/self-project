@@ -20,7 +20,7 @@
                     прочитать ниже.
                 </h3>
             </div>
-            <img class="img-animation" src="/photo.png" alt="photo" />
+            <img class="img-animation rounded-full" src="/photo.jpg" alt="photo" />
         </section>
         <section class="lines-animation">
             <div class="-rotate-3">
