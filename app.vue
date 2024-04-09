@@ -19,6 +19,10 @@
     header {
         background: none;
         color: $dark-color;
+
+        .after::after {
+            background-color: $dark-color;
+        }
     }
 
     .nuxt-icon.developer,
