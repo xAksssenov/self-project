@@ -50,6 +50,16 @@ function handleSwitchChange() {
     switchValue.value = !switchValue.value
 }
 
+watch(switchValue, (newValue) => {
+    if (newValue) {
+        document.documentElement.classList.add('lightTheme')
+        document.documentElement.classList.remove('darkTheme')
+    } else {
+        document.documentElement.classList.add('darkTheme')
+        document.documentElement.classList.remove('lightTheme')
+    }
+})
+
 function scrollToElement(elementId: string) {
     const element = document.getElementById(elementId)
     if (element) {
@@ -90,6 +100,6 @@ function handleContactClick() {
 
 .header-animation {
     animation: fade-in 1.5s ease;
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
 }
 </style>

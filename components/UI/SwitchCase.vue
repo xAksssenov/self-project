@@ -1,6 +1,7 @@
 <template>
     <div>
         <label
+            :class="{ 'switch-checked': value }"
             class="switch relative inline-block w-28 h-14 border-2 border-solid border-white cursor-pointer rounded-full"
         >
             <input v-model="value" class="opacity-0 w-0 h-0" type="checkbox" />
@@ -30,5 +31,9 @@ const value = computed({
 input:checked + .slider {
     background-color: black;
     transform: translateX(3.2rem);
+}
+
+.switch-checked {
+    border-color: black;
 }
 </style>
