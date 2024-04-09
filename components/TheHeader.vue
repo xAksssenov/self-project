@@ -1,7 +1,9 @@
 <template>
-    <header class="sticky top-0 bg-zinc-900/70 backdrop-blur z-50 header-animation">
+    <header
+        class="sticky top-0 bg-zinc-900/70 backdrop-blur bg-none z-50 header-animation text-white"
+    >
         <div
-            class="flex justify-between items-center mx-20 py-8 relative after:h-px after:bg-white after:w-full after:absolute after:bottom-0"
+            class="after flex justify-between items-center mx-20 py-8 relative after:h-px after:bg-white after:w-full after:absolute after:bottom-0"
         >
             <div class="flex gap-20">
                 <NuxtLink
@@ -52,11 +54,11 @@ function handleSwitchChange() {
 
 watch(switchValue, (newValue) => {
     if (newValue) {
-        document.documentElement.classList.add('lightTheme')
-        document.documentElement.classList.remove('darkTheme')
+        document.documentElement.classList.add('light')
+        document.documentElement.classList.remove('dark')
     } else {
-        document.documentElement.classList.add('darkTheme')
-        document.documentElement.classList.remove('lightTheme')
+        document.documentElement.classList.add('dark')
+        document.documentElement.classList.remove('light')
     }
 })
 
@@ -85,6 +87,10 @@ function handleProjectsClick() {
 function handleContactClick() {
     scrollToElement('contact')
 }
+
+onMounted(() => {
+    document.documentElement.classList.add('dark')
+})
 </script>
 
 <style lang="scss" scoped>

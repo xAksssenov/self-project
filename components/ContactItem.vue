@@ -31,8 +31,26 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/variables' as *;
+
 .nuxt-icon.contact-svg {
     width: 30rem;
     height: 30rem;
+}
+
+.light {
+    input,
+    textarea {
+        background-color: $dark-color;
+        color: $light-color;
+    }
+}
+
+.dark {
+    input,
+    textarea {
+        background-color: $light-color;
+        color: $dark-color;
+    }
 }
 </style>

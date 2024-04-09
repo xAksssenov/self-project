@@ -5,6 +5,37 @@
 </template>
 
 <style lang="scss">
+@use '@/assets/scss/variables' as *;
+
+.dark {
+    background-color: $dark-color;
+    color: $light-color;
+}
+
+.light {
+    background-color: $light-color;
+    color: $dark-color;
+
+    header {
+        background: none;
+        color: $dark-color;
+    }
+
+    .nuxt-icon.developer,
+    .nuxt-icon.connect,
+    .nuxt-icon.links {
+        path {
+            fill: $dark-color;
+        }
+    }
+
+    .nuxt-icon.me {
+        path {
+            stroke: $dark-color;
+        }
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -19,13 +50,13 @@ textarea {
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    background-color: rgb(24 24 27);
+    background-color: $dark-color;
+    transition: all 0.5s ease-in-out;
 }
 
 body {
     margin: 0;
     font-family: Goldman, sans-serif;
-    color: white;
 }
 
 h1 {

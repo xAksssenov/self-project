@@ -28,7 +28,6 @@
         font-size: 3rem;
         backdrop-filter: blur(0.5rem);
         color: rgb(252 165 165);
-        border: 2px solid white;
     }
 
     &__front {
@@ -67,6 +66,18 @@
 
     100% {
         transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+.light {
+    .cube__face {
+        border: 2px solid black;
+    }
+}
+
+.dark {
+    .cube__face {
+        border: 2px solid white;
     }
 }
 </style>
