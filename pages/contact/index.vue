@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!loading" class="mx-20" :class="{ loading: loading }">
+    <div v-if="!loading" class="lg:mx-20 mx-10" :class="{ loading: loading }">
         <section>
             <ContactLinks />
         </section>

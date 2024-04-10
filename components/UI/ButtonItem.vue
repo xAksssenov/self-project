@@ -1,6 +1,6 @@
 <template>
     <button
-        class="mx-4 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease transform hover:scale-110"
+        class="lg:mx-4 mx-2 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease transform hover:scale-110"
     >
         <slot />
     </button>

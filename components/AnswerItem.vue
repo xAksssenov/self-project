@@ -1,11 +1,11 @@
 <template>
-    <h2 class="text-7xl mt-8">Часто задаваемые вопросы</h2>
+    <h2 class="lg:text-7xl text-4xl lg:mt-8 mt-4">Часто задаваемые вопросы</h2>
     <ul>
         <li v-for="(question, index) in questions" :key="index">
             <div
-                class="flex flex-row justify-between items-end relative after:h-px after:bg-gray-500 after:w-full after:absolute after:top-28"
+                class="flex flex-row justify-between items-end relative after:h-px after:bg-gray-500 after:w-full after:absolute lg:after:top-28 after:top-20"
             >
-                <h3 class="text-5xl mt-12">{{ question.question }}</h3>
+                <h3 class="lg:text-5xl text-3xl lg:mt-12 mt-7">{{ question.question }}</h3>
                 <button
                     :style="{ transform: question.open ? 'rotate(45deg)' : '' }"
                     @click="toggleAnswer(index)"
@@ -15,7 +15,7 @@
             </div>
             <p
                 v-if="question.open"
-                class="text-4xl mt-12 text-gray-400"
+                class="lg:text-4xl text-2xl lg:mt-12 mt-6 text-gray-400"
                 :class="{ 'text-answer': question.open }"
             >
                 {{ question.answer }}
@@ -52,6 +52,13 @@ function toggleAnswer(index: number) {
 .nuxt-icon.plus {
     width: 3rem;
     height: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .nuxt-icon.plus {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 
 .text-answer {

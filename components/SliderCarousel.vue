@@ -1,8 +1,8 @@
 <template>
-    <NuxtCarousel :items-to-show="3.95" :wrap-around="true" :transition="500">
+    <NuxtCarousel :items-to-show="itemsToShow" :wrap-around="true" :transition="500">
         <NuxtSlide v-for="slide in slides" :key="slide.index" :index="slide.index">
             <img class="rounded-3xl" :src="slide.image" :alt="'Slide ' + slide.index" />
-            <ButtonItem class="text-2xl py-3 px-10">Подробнее</ButtonItem>
+            <ButtonItem class="lg:text-2xl text-xl lg:py-3 py-1 lg:px-10 px-4">Подробнее</ButtonItem>
         </NuxtSlide>
     </NuxtCarousel>
 </template>
@@ -15,6 +15,21 @@ const slides = [
     { index: 4, image: '/project-4.jpg' },
     { index: 5, image: '/project-5.jpg' },
 ]
+
+const itemsToShow = ref(3.95)
+
+const updateItemsToShow = () => {
+    itemsToShow.value = window.innerWidth < 1024 ? 2 : 3.95
+}
+
+onMounted(() => {
+    updateItemsToShow()
+    window.addEventListener('resize', updateItemsToShow)
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', updateItemsToShow)
+})
 </script>
 
 <style lang="scss" scoped>

@@ -1,15 +1,15 @@
 <template>
-    <div class="flex my-40 running-animation">
-        <span class="flex -translate-x-full whitespace-nowrap text-7xl text-red-200">
+    <div class="flex lg:my-40 my-20 running-animation">
+        <span class="flex -translate-x-full whitespace-nowrap lg:text-7xl text-3xl text-red-200">
             DEVELOPER & DESIGNER.
         </span>
-        <span class="flex -translate-x-full whitespace-nowrap text-7xl text-red-200">
+        <span class="flex -translate-x-full whitespace-nowrap lg:text-7xl text-3xl text-red-200">
             DEVELOPER & DESIGNER.
         </span>
-        <span class="flex -translate-x-full whitespace-nowrap text-7xl text-red-200">
+        <span class="flex -translate-x-full whitespace-nowrap lg:text-7xl text-3xl text-red-200">
             DEVELOPER & DESIGNER.
         </span>
-        <span class="flex -translate-x-full whitespace-nowrap text-7xl text-red-200">
+        <span class="flex -translate-x-full whitespace-nowrap lg:text-7xl text-3xl text-red-200">
             DEVELOPER & DESIGNER.
         </span>
     </div>

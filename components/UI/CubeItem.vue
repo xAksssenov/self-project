@@ -80,4 +80,50 @@
         border: 2px solid white;
     }
 }
+
+@media (max-width: 1024px) {
+    .cube {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: cube-spinner 12s ease infinite;
+        margin-top: 10rem;
+
+        &__face {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            font-size: 2rem;
+            backdrop-filter: blur(0.5rem);
+            color: rgb(252 165 165);
+        }
+
+        &__front {
+            transform: translateZ(90px);
+        }
+
+        &__top {
+            transform: rotateY(90deg) translateZ(90px);
+        }
+
+        &__right {
+            transform: rotateX(90deg) translateZ(90px);
+        }
+
+        &__back {
+            transform: rotateY(180deg) translateZ(90px);
+        }
+
+        &__bottom {
+            transform: rotateY(-90deg) translateZ(90px);
+        }
+
+        &__left {
+            transform: rotateX(-90deg) translateZ(90px);
+        }
+    }
+}
 </style>

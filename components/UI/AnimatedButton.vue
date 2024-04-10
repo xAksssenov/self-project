@@ -1,7 +1,7 @@
 <template>
     <NuxtLink
         href="/contact"
-        class="link py-10 px-24 text-5xl m-4 rounded-3xl border-2 border-solid border-red-300 cursor-pointer"
+        class="link lg:py-10 py-5 lg:px-24 px-12 lg:text-5xl text-3xl m-4 rounded-3xl border-2 border-solid border-red-300 cursor-pointer"
     >
         Contact me
         <SvgoIconBell class="bell" filled />

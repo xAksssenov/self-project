@@ -1,30 +1,33 @@
 <template>
     <div
         id="contact"
-        class="contact-animation my-28 flex flex-col items-center gap-16 relative"
+        class="contact-animation lg:my-28 my-10 flex flex-col items-center lg:gap-16 gap-8 relative"
     >
-        <h2 class="text-7xl w-fit">Для быстрой связи со мной</h2>
-        <div class="flex flex-col gap-8 items-center w-1/4">
+        <h2 class="lg:text-7xl text-4xl w-fit">Для быстрой связи со мной</h2>
+        <div class="flex flex-col lg:gap-8 gap-4 items-center lg:w-1/4">
             <input
-                class="px-10 py-6 bg-white text-4xl rounded-3xl w-full text-black font-sans"
+                class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl w-full text-black font-sans"
                 type="text"
+                required
                 placeholder="Введите имя"
             />
             <input
-                class="px-10 py-6 bg-white text-4xl rounded-3xl w-full text-black font-sans"
+                class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl w-full text-black font-sans"
                 type="mail"
+                required
                 placeholder="Введите почту"
             />
             <textarea
                 id="1"
-                class="px-10 py-6 bg-white text-4xl rounded-3xl text-black w-full h-80 resize-none outline-none border-none font-sans"
+                class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl text-black w-full lg:h-80 h-64 resize-none outline-none border-none font-sans"
                 name="area"
+                required
                 placeholder="Введите текст"
             />
         </div>
-        <SvgoIconContact class="contact-svg absolute right-96 top-12" filled />
-        <ButtonItem class="text-5xl py-7 px-28">Отправить</ButtonItem>
-        <h3 class="text-5xl w-fit opacity-30">Сообщение придет мне на почту</h3>
+        <SvgoIconContact class="contact-svg absolute right-96 top-12 lg:block hidden" filled />
+        <ButtonItem class="lg:text-5xl text-3xl lg:py-7 py-3 lg:px-28 px-14">Отправить</ButtonItem>
+        <h3 class="lg:text-5xl text-2xl w-fit opacity-30">Сообщение придет мне на почту</h3>
     </div>
 </template>
 

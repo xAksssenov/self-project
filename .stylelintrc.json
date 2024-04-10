@@ -6,6 +6,7 @@
         "scss/at-function-pattern": null,
         "function-no-unknown": null,
         "no-empty-source": null,
-        "at-rule-no-unknown": null
+        "at-rule-no-unknown": null,
+        "media-feature-range-notation": null
     }
 }

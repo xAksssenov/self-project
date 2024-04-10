@@ -1,18 +1,21 @@
 <template>
-    <div class="mx-20">
-        <section v-if="!loading" class="my-20 flex relative" :class="{ loading: loading }">
+    <div class="lg:mx-20 mx-10">
+        <section v-if="!loading" class="lg:my-20 mt-10 flex relative" :class="{ loading: loading }">
             <SvgoIconBackground class="img ml-auto svg-animation-bg" filled />
             <SvgoIconTitle
-                class="developer svg-animation-text absolute left-24 bottom-40"
+                class="developer svg-animation-text absolute lg:left-24 -left-4 lg:bottom-40 bottom-20"
                 filled
             />
         </section>
-        <section class="flex mx-28 justify-between items-center">
-            <div id="about" class="title-animation flex flex-col items-end w-6/12 relative">
-                <h2 class="text-7xl w-fit">Привет, меня зовут Кирилл</h2>
-                <p class="my-1 text-3xl w-fit text-red-300">Aksenov Kirill</p>
+        <section class="flex lg:mx-28 mx-8 lg:justify-between gap-10 lg:flex-row flex-col items-center">
+            <div
+                id="about"
+                class="title-animation flex flex-col lg:items-end items-center lg:w-6/12 relative"
+            >
+                <h2 class="lg:text-7xl text-4xl w-fit text-center">Привет, меня зовут Кирилл</h2>
+                <p class="my-1 lg:text-3xl text-2xl w-fit text-red-300">Aksenov Kirill</p>
                 <SvgoIconAbout class="me absolute -top-36 -right-72" filled />
-                <h3 class="text-5xl text-end mt-8">
+                <h3 class="lg:text-5xl text-3xl lg:text-end text-center mt-8">
                     Я студент 2 курса Московского Политеха. Учусь на направлении
                     веб-разработка, также заканчивал курс Дополнительного профессионального
                     образования по той же специальности. Разработкой занимаюсь не первый год и
@@ -20,7 +23,7 @@
                     прочитать ниже.
                 </h3>
             </div>
-            <img class="img-animation rounded-full" src="/photo.jpg" alt="photo" />
+            <img class="img-animation rounded-full lg:w-fit lg:h-fit w-72 h-72" src="/photo.jpg" alt="photo" />
         </section>
         <section class="lines-animation">
             <div class="-rotate-3">
@@ -30,10 +33,10 @@
                 <RunningLine class="running-animation-second" />
             </div>
         </section>
-        <section class="flex mx-28 justify-between items-center">
+        <section class="flex lg:mx-28 mx-0 justify-between lg:flex-row flex-col items-center">
             <SkillsItem />
         </section>
-        <section class="slider-animation mt-52">
+        <section class="lg:mt-52 mt-48">
             <SliderCarousel v-if="isLoaded" />
         </section>
         <section class="lines-animation">
@@ -44,21 +47,21 @@
                 <RunningLine class="running-animation-second" />
             </div>
         </section>
-        <section class="lines-animation my-20 flex relative">
+        <section class="lines-animation lg:my-20 my-0 flex relative">
             <SvgoIconBackground class="img ml-auto" filled />
-            <SvgoIconTitleSecond class="connect absolute left-24 bottom-40" filled />
+            <SvgoIconTitleSecond class="connect absolute developer lg:left-24 left-0 lg:bottom-40 bottom-20" filled />
         </section>
-        <section class="buttons-animation flex flex-col w-6/12 mx-auto">
+        <section class="buttons-animation flex flex-col lg:w-6/12 lg:mx-auto">
             <AnswerItem />
         </section>
         <section
             id="contact"
-            class="lines-animation my-28 m-auto flex flex-col items-center w-6/12 relative"
+            class="lines-animation lg:my-28 my-10 m-auto flex flex-col items-center lg:w-6/12 relative"
         >
-            <h3 class="text-5xl m-8 text-center">
+            <h3 class="lg:text-5xl text-3xl lg:m-8 m-4 text-center">
                 Вам понравился мой сайт? Обязательно свяжитесь со мной любым удобным способом
             </h3>
-            <SvgoIconEnd class="end absolute top-24 right-20" filled />
+            <SvgoIconEnd class="end absolute lg:top-24 top-24 lg:right-20 right-0" filled />
             <AnimatedButton />
         </section>
     </div>
@@ -106,23 +109,53 @@ onMounted(() => {
 }
 
 .nuxt-icon {
-    width: 100rem;
-    height: 50rem;
-}
-
-.nuxt-icon.img {
-    width: 100rem;
-    height: 70rem;
-}
-
-.nuxt-icon.me {
-    width: 35rem;
+    width: 50rem;
     height: 25rem;
 }
 
+.nuxt-icon.developer {
+    width: 40rem;
+    height: 25rem;
+}
+
+.nuxt-icon.img {
+    width: 50rem;
+    height: 35rem;
+}
+
+.nuxt-icon.me {
+    width: 17.5rem;
+    height: 12.5rem;
+    visibility: hidden;
+}
+
 .nuxt-icon.end {
-    width: 12rem;
-    height: 12rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+@media (min-width: 1024px) {
+    .nuxt-icon,
+    .nuxt-icon.developer {
+        width: 100rem;
+        height: 50rem;
+    }
+
+    .nuxt-icon.img {
+        width: 100rem;
+        height: 70rem;
+    }
+
+    .nuxt-icon.me {
+        width: 35rem;
+        height: 25rem;
+        visibility: visible;
+    }
+
+    .nuxt-icon.end {
+        width: 12rem;
+        height: 12rem;
+    }
 }
 
 .title-animation {
