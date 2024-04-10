@@ -1,7 +1,12 @@
 <template>
-    <div class="flex mx-20 lg:justify-between lg:flex-row flex-column lg:items-start items-center">
+    <div
+        class="flex mx-20 lg:justify-between lg:flex-row flex-column lg:items-start items-center"
+    >
         <div class="links-animation">
-            <div id="about" class="lg:my-28 my-10 flex flex-col lg:items-start items-center lg:w-2/3 w-full relative">
+            <div
+                id="about"
+                class="lg:my-28 my-10 flex flex-col lg:items-start items-center lg:w-2/3 w-full relative"
+            >
                 <h2 class="lg:text-7xl text-4xl w-fit lg:text-start text-center">
                     Если вам понравился данный сайт, то дайте пожалуйста отзыв
                 </h2>

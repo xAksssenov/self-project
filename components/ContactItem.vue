@@ -26,7 +26,9 @@
             />
         </div>
         <SvgoIconContact class="contact-svg absolute right-96 top-12 lg:block hidden" filled />
-        <ButtonItem class="lg:text-5xl text-3xl lg:py-7 py-3 lg:px-28 px-14">Отправить</ButtonItem>
+        <ButtonItem class="lg:text-5xl text-3xl lg:py-7 py-3 lg:px-28 px-14">
+            Отправить
+        </ButtonItem>
         <h3 class="lg:text-5xl text-2xl w-fit opacity-30">Сообщение придет мне на почту</h3>
     </div>
 </template>

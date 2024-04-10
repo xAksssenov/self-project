@@ -35,13 +35,13 @@ input:checked + .slider {
 }
 
 @media (max-width: 1024px) {
-        input:checked + .slider {
-            transform: translateX(2.4rem);
-        }
+    input:checked + .slider {
+        transform: translateX(2.4rem);
+    }
 
-        .switch {
-            height: 2.6rem;
-        }
+    .switch {
+        height: 2.6rem;
+    }
 }
 
 .switch-checked {

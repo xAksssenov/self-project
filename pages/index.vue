@@ -1,18 +1,26 @@
 <template>
     <div class="lg:mx-20 mx-10">
-        <section v-if="!loading" class="lg:my-20 mt-10 flex relative" :class="{ loading: loading }">
+        <section
+            v-if="!loading"
+            class="lg:my-20 mt-10 flex relative"
+            :class="{ loading: loading }"
+        >
             <SvgoIconBackground class="img ml-auto svg-animation-bg" filled />
             <SvgoIconTitle
                 class="developer svg-animation-text absolute lg:left-24 -left-4 lg:bottom-40 bottom-20"
                 filled
             />
         </section>
-        <section class="flex lg:mx-28 mx-8 lg:justify-between gap-10 lg:flex-row flex-col items-center">
+        <section
+            class="flex lg:mx-28 mx-8 lg:justify-between gap-10 lg:flex-row flex-col items-center"
+        >
             <div
                 id="about"
                 class="title-animation flex flex-col lg:items-end items-center lg:w-6/12 relative"
             >
-                <h2 class="lg:text-7xl text-4xl w-fit text-center">Привет, меня зовут Кирилл</h2>
+                <h2 class="lg:text-7xl text-4xl w-fit text-center">
+                    Привет, меня зовут Кирилл
+                </h2>
                 <p class="my-1 lg:text-3xl text-2xl w-fit text-red-300">Aksenov Kirill</p>
                 <SvgoIconAbout class="me absolute -top-36 -right-72" filled />
                 <h3 class="lg:text-5xl text-3xl lg:text-end text-center mt-8">
@@ -23,7 +31,11 @@
                     прочитать ниже.
                 </h3>
             </div>
-            <img class="img-animation rounded-full lg:w-fit lg:h-fit w-72 h-72" src="/photo.jpg" alt="photo" />
+            <img
+                class="img-animation rounded-full lg:w-fit lg:h-fit w-72 h-72"
+                src="/photo.jpg"
+                alt="photo"
+            />
         </section>
         <section class="lines-animation">
             <div class="-rotate-3">
@@ -49,7 +61,10 @@
         </section>
         <section class="lines-animation lg:my-20 my-0 flex relative">
             <SvgoIconBackground class="img ml-auto" filled />
-            <SvgoIconTitleSecond class="connect absolute developer lg:left-24 left-0 lg:bottom-40 bottom-20" filled />
+            <SvgoIconTitleSecond
+                class="connect absolute developer lg:left-24 left-0 lg:bottom-40 bottom-20"
+                filled
+            />
         </section>
         <section class="buttons-animation flex flex-col lg:w-6/12 lg:mx-auto">
             <AnswerItem />

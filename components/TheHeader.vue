@@ -19,7 +19,7 @@
                     Frontend Developer/Designer UI/UX
                 </NuxtLink>
             </div>
-            <div class=" lg:gap-10 lg:flex hidden gap-4">
+            <div class="lg:gap-10 lg:flex hidden gap-4">
                 <button
                     class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
                     @click="handleAboutClick"
@@ -41,7 +41,10 @@
                 </button>
             </div>
             <SwitchCase :model-value="switchValue" @update:model-value="handleSwitchChange">
-                <SvgoIconSwitch class="svg absolute lg:-left-24 lg:-top-1 top-1 -left-12" filled />
+                <SvgoIconSwitch
+                    class="svg absolute lg:-left-24 lg:-top-1 top-1 -left-12"
+                    filled
+                />
             </SwitchCase>
         </div>
     </header>

@@ -2,7 +2,9 @@
     <NuxtCarousel :items-to-show="itemsToShow" :wrap-around="true" :transition="500">
         <NuxtSlide v-for="slide in slides" :key="slide.index" :index="slide.index">
             <img class="rounded-3xl" :src="slide.image" :alt="'Slide ' + slide.index" />
-            <ButtonItem class="lg:text-2xl text-xl lg:py-3 py-1 lg:px-10 px-4">Подробнее</ButtonItem>
+            <ButtonItem class="lg:text-2xl text-xl lg:py-3 py-1 lg:px-10 px-4">
+                Подробнее
+            </ButtonItem>
         </NuxtSlide>
     </NuxtCarousel>
 </template>
