@@ -63,6 +63,7 @@ body {
     font-family: Goldman, sans-serif;
     max-width: 1920px;
     margin: auto;
+    overflow: hidden;
 }
 
 h1 {
@@ -115,9 +116,5 @@ button {
 ol,
 ul {
     list-style: none;
-}
-
-.carousel__viewport {
-    overflow: visible;
 }
 </style>

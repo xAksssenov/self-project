@@ -264,7 +264,7 @@ onMounted(() => {
 
 @keyframes run-one {
     0% {
-        transform: translateX(24.35%);
+        transform: translateX(62.5%);
     }
 
     100% {
@@ -278,7 +278,7 @@ onMounted(() => {
 
 @keyframes run-two {
     0% {
-        transform: translateX(-24.35%);
+        transform: translateX(-62.5%);
     }
 
     100% {
@@ -288,5 +288,35 @@ onMounted(() => {
 
 .running-animation-second {
     animation: run-two 4s linear infinite;
+}
+
+@media (min-width: 1024px) {
+    @keyframes run-one {
+        0% {
+            transform: translateX(24.35%);
+        }
+
+        100% {
+            transform: translateX(-20%);
+        }
+    }
+
+    .running-animation-first {
+        animation: run-one 4s linear infinite;
+    }
+
+    @keyframes run-two {
+        0% {
+            transform: translateX(-24.35%);
+        }
+
+        100% {
+            transform: translateX(20%);
+        }
+    }
+
+    .running-animation-second {
+        animation: run-two 4s linear infinite;
+    }
 }
 </style>
