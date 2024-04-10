@@ -4,6 +4,7 @@
             :class="{ 'switch-checked': value }"
             class="switch relative inline-block w-28 h-14 border-2 border-solid border-white cursor-pointer rounded-full"
         >
+            <slot />
             <input v-model="value" class="opacity-0 w-0 h-0" type="checkbox" />
             <span
                 class="slider top-px left-px absolute h-12 w-12 rounded-full bg-white border-2 border-black transition-all duration-500"

@@ -40,13 +40,9 @@
                     Contact
                 </button>
             </div>
-            <div class="flex gap-10">
-                <SvgoIconSwitch class="svg" filled />
-                <SwitchCase
-                    :model-value="switchValue"
-                    @update:model-value="handleSwitchChange"
-                />
-            </div>
+            <SwitchCase :model-value="switchValue" @update:model-value="handleSwitchChange">
+                <SvgoIconSwitch class="svg absolute -left-24 -top-1" filled />
+            </SwitchCase>
         </div>
     </header>
 </template>
