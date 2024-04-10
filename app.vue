@@ -63,7 +63,6 @@ body {
     font-family: Goldman, sans-serif;
     max-width: 1920px;
     margin: auto;
-    overflow: hidden;
 }
 
 h1 {
