@@ -21,7 +21,7 @@ const slides = [
 const itemsToShow = ref(3.95)
 
 const updateItemsToShow = () => {
-    itemsToShow.value = window.innerWidth < 1024 ? 2 : 3.95
+    itemsToShow.value = window.innerWidth < 1024 ? 1.5 : 3.95
 }
 
 onMounted(() => {
@@ -36,7 +36,7 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
 .carousel__slide {
-    padding: 0.5rem;
+    padding: 3rem 0.5rem;
     opacity: 0.9;
     transform: rotateY(-20deg) scale(0.9);
     border-radius: 3rem;
