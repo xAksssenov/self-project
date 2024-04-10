@@ -38,7 +38,8 @@ setTimeout(() => {
     }
 }
 
-.links-animation {
+.links-animation,
+.mobile-animation {
     animation: links 2s ease;
 }
 

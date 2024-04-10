@@ -60,8 +60,9 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: Goldman, sans-serif;
+    max-width: 1920px;
+    margin: auto;
 }
 
 h1 {
