@@ -37,7 +37,7 @@
                 alt="photo"
             />
         </section>
-        <section class="lines-animation">
+        <section class="lines-animation overflow-hidden">
             <div class="-rotate-3">
                 <RunningLine class="running-animation-first" />
             </div>
@@ -51,7 +51,7 @@
         <section class="lg:mt-52 mt-48">
             <SliderCarousel v-if="isLoaded" />
         </section>
-        <section class="lines-animation">
+        <section class="lines-animation overflow-hidden">
             <div id="projects" class="rotate-3">
                 <RunningLine class="running-animation-first" />
             </div>
