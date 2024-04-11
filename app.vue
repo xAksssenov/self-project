@@ -34,7 +34,8 @@
         }
     }
 
-    .nuxt-icon.me {
+    .nuxt-icon.me,
+    .nuxt-icon.menu {
         path {
             stroke: $dark-color;
         }

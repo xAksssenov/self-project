@@ -40,13 +40,28 @@
                     Contact
                 </button>
             </div>
-            <SwitchCase :model-value="switchValue" @update:model-value="handleSwitchChange">
-                <SvgoIconSwitch
-                    class="svg absolute lg:-left-24 lg:-top-1 top-1 -left-12"
-                    filled
-                />
-            </SwitchCase>
+            <div class="flex justify-between items-center gap-5">
+                <SwitchCase
+                    :model-value="switchValue"
+                    @update:model-value="handleSwitchChange"
+                >
+                    <SvgoIconSwitch
+                        class="svg absolute lg:-left-24 lg:-top-1 top-1 -left-12"
+                        filled
+                    />
+                </SwitchCase>
+                <div class="lg:hidden block">
+                    <SvgoIconMenu
+                        class="menu cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                        filled
+                        @click="showPop"
+                    />
+                </div>
+            </div>
         </div>
+        <transition name="pop">
+            <PopUp :show="popVisible" @click.self="closePop" />
+        </transition>
     </header>
 </template>
 
@@ -93,12 +108,32 @@ function handleContactClick() {
     scrollToElement('contact')
 }
 
+const popVisible = ref(false)
+
+function showPop() {
+    popVisible.value = !popVisible.value
+
+    if (popVisible.value) {
+        window.addEventListener('scroll', closePop, true)
+    }
+}
+
+function closePop() {
+    popVisible.value = false
+    window.removeEventListener('scroll', closePop, true)
+}
+
 onMounted(() => {
     document.documentElement.classList.add('dark')
 })
 </script>
 
 <style lang="scss" scoped>
+.nuxt-icon.menu {
+    width: 2rem;
+    height: 2rem;
+}
+
 @keyframes fade-in {
     0% {
         transform: translateY(-100px);
@@ -124,5 +159,15 @@ onMounted(() => {
         width: 4rem;
         height: 4rem;
     }
+}
+
+.pop-enter-active,
+.pop-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.pop-enter-from,
+.pop-leave-to {
+    opacity: 0;
 }
 </style>

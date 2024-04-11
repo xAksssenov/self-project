@@ -58,4 +58,9 @@
         color: $dark-color;
     }
 }
+
+input:invalid,
+textarea:invalid {
+    border: 2px solid #fca5a5;
+}
 </style>

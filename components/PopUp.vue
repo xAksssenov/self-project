@@ -1,0 +1,80 @@
+<template>
+    <div
+        v-if="show"
+        class="pop w-fit p-2 h-screen absolute top-20 right-0 bg-zinc-900/70 backdrop-blur bg-none"
+    >
+        <ul class="w-fit p-2">
+            <li class="my-5">
+                <button
+                    class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    @click="handleAboutClick"
+                >
+                    About
+                </button>
+            </li>
+            <li class="my-5">
+                <button
+                    v-if="$route.path !== '/contact'"
+                    class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    @click="handleProjectsClick"
+                >
+                    Projects
+                </button>
+            </li>
+            <li class="my-5">
+                <button
+                    class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    @click="handleContactClick"
+                >
+                    Contact
+                </button>
+            </li>
+        </ul>
+    </div>
+</template>
+
+<script setup lang="ts">
+defineProps({ show: Boolean })
+
+function scrollToElement(elementId: string) {
+    const element = document.getElementById(elementId)
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+}
+
+function scrollToElementProject(elementId: string) {
+    const element = document.getElementById(elementId)
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'end' })
+    }
+}
+
+function handleAboutClick() {
+    scrollToElement('about')
+}
+
+function handleProjectsClick() {
+    scrollToElementProject('projects')
+}
+
+function handleContactClick() {
+    scrollToElement('contact')
+}
+</script>
+
+<style lang="scss">
+@use '@/assets/scss/variables' as *;
+
+.light {
+    .pop {
+        color: $dark-color;
+    }
+}
+
+.dark {
+    .pop {
+        color: $light-color;
+    }
+}
+</style>
