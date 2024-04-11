@@ -3,27 +3,27 @@
         v-if="show"
         class="pop w-fit p-2 h-screen absolute top-20 right-0 bg-zinc-900/70 backdrop-blur bg-none"
     >
-        <ul class="w-fit p-2">
-            <li class="my-5">
+        <ul class="w-fit p-3">
+            <li class="my-5 mx-2">
                 <button
-                    class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    class="lg:text-4xl text-2xl text-red-300 cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
                     @click="handleAboutClick"
                 >
                     About
                 </button>
             </li>
-            <li class="my-5">
+            <li class="my-5 mx-2">
                 <button
                     v-if="$route.path !== '/contact'"
-                    class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    class="lg:text-4xl text-2xl text-red-300 cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
                     @click="handleProjectsClick"
                 >
                     Projects
                 </button>
             </li>
-            <li class="my-5">
+            <li class="my-5 mx-2">
                 <button
-                    class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
+                    class="lg:text-4xl text-2xl text-red-300 cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
                     @click="handleContactClick"
                 >
                     Contact
