@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:mx-20 mx-10">
+    <div class="lg:mx-20 mx-10 lg:mt-40 mt-10">
         <section
             v-if="!loading"
             class="lg:my-20 mt-10 flex relative"
