@@ -6,7 +6,7 @@
         <section>
             <ContactItem />
         </section>
-        <section class="overflow-hidden">
+        <section>
             <div class="-rotate-3">
                 <RunningLine class="running-animation-first" />
             </div>

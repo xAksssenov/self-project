@@ -1,6 +1,6 @@
 <template>
     <header
-        class="sticky top-0 bg-zinc-900/70 backdrop-blur bg-none z-50 header-animation text-white"
+        class="fixed w-full top-0 bg-zinc-900/70 backdrop-blur bg-none z-50 header-animation text-white"
     >
         <div
             class="after flex justify-between items-center lg:mx-20 mx-10 lg:py-8 py-4 relative after:h-px after:bg-white after:w-full after:absolute after:bottom-0"

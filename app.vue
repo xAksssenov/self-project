@@ -62,6 +62,7 @@ html {
 body {
     font-family: Goldman, sans-serif;
     max-width: 1920px;
+    overflow-x: hidden;
     margin: auto;
 }
 
