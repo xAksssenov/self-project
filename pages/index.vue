@@ -48,7 +48,7 @@
         <section class="flex xl:mx-28 mx-0 justify-between xl:flex-row flex-col items-center">
             <SkillsItem />
         </section>
-        <section class="lg:mt-52 mt-48">
+        <section class="slider-animation lg:mt-52 mt-48">
             <SliderCarousel v-if="isLoaded" />
         </section>
         <section class="lines-animation">
