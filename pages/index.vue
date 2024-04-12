@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:mx-20 mx-10 lg:mt-40 mt-10">
+    <div class="sm:mx-20 mx-10 lg:mt-40 sm:mt-28 mt-10">
         <section
             v-if="!loading"
             class="lg:my-20 mt-10 flex relative"
@@ -18,7 +18,7 @@
                 id="about"
                 class="title-animation flex flex-col lg:items-end items-center lg:w-6/12 relative"
             >
-                <h2 class="lg:text-7xl text-4xl w-fit text-center">
+                <h2 class="lg:text-7xl text-4xl w-fit lg:text-end text-center">
                     Привет, меня зовут Кирилл
                 </h2>
                 <p class="my-1 lg:text-3xl text-2xl w-fit text-red-300">Aksenov Kirill</p>
@@ -45,7 +45,7 @@
                 <RunningLine class="running-animation-second" />
             </div>
         </section>
-        <section class="flex lg:mx-28 mx-0 justify-between lg:flex-row flex-col items-center">
+        <section class="flex xl:mx-28 mx-0 justify-between xl:flex-row flex-col items-center">
             <SkillsItem />
         </section>
         <section class="lg:mt-52 mt-48">
@@ -66,7 +66,7 @@
                 filled
             />
         </section>
-        <section class="buttons-animation flex flex-col lg:w-6/12 lg:mx-auto">
+        <section class="buttons-animation flex flex-col xl:w-6/12 sm:w-2/3 mx-auto">
             <AnswerItem />
         </section>
         <section
@@ -76,7 +76,10 @@
             <h3 class="lg:text-5xl text-3xl lg:m-8 m-4 text-center">
                 Вам понравился мой сайт? Обязательно свяжитесь со мной любым удобным способом
             </h3>
-            <SvgoIconEnd class="end absolute lg:top-24 top-24 lg:right-20 right-0" filled />
+            <SvgoIconEnd
+                class="end absolute xl:top-28 top-24 xl:-right-20 right-0 sm:invisible xl:visible"
+                filled
+            />
             <AnimatedButton />
         </section>
     </div>
@@ -149,6 +152,14 @@ onMounted(() => {
     height: 6rem;
 }
 
+@media (min-width: 1400px) {
+    .nuxt-icon.me {
+        width: 35rem;
+        height: 25rem;
+        visibility: visible;
+    }
+}
+
 @media (min-width: 1024px) {
     .nuxt-icon,
     .nuxt-icon.developer {
@@ -159,12 +170,6 @@ onMounted(() => {
     .nuxt-icon.img {
         width: 100rem;
         height: 70rem;
-    }
-
-    .nuxt-icon.me {
-        width: 35rem;
-        height: 25rem;
-        visibility: visible;
     }
 
     .nuxt-icon.end {

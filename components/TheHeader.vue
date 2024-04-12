@@ -19,7 +19,7 @@
                     Frontend Developer/Designer UI/UX
                 </NuxtLink>
             </div>
-            <div class="lg:gap-10 lg:flex hidden gap-4">
+            <div class="xl:gap-10 xl:flex hidden gap-4">
                 <button
                     class="lg:text-4xl text-2xl cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
                     @click="handleAboutClick"
@@ -50,7 +50,7 @@
                         filled
                     />
                 </SwitchCase>
-                <div class="lg:hidden block">
+                <div class="xl:hidden block">
                     <SvgoIconMenu
                         class="menu cursor-pointer transition-transform duration-500 ease transform hover:-translate-y-2"
                         filled

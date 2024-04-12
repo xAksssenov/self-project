@@ -81,7 +81,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .cube {
         width: 150px;
         height: 150px;

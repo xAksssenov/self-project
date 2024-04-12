@@ -21,7 +21,8 @@ const slides = [
 const itemsToShow = ref(3.95)
 
 const updateItemsToShow = () => {
-    itemsToShow.value = window.innerWidth < 1024 ? 1.5 : 3.95
+    itemsToShow.value = window.innerWidth < 1280 ? 2.95 : 3.95
+    itemsToShow.value = window.innerWidth < 768 ? 1.5 : 3.95
 }
 
 onMounted(() => {
