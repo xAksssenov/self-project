@@ -10,6 +10,7 @@
             class="flex flex-col lg:gap-8 gap-4 items-center xl:w-1/4"
         >
             <input
+                id="name"
                 class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl w-full text-black font-sans"
                 name="name"
                 type="text"
@@ -17,6 +18,7 @@
                 placeholder="Введите имя"
             />
             <input
+                id="email"
                 class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl w-full text-black font-sans"
                 name="email"
                 type="email"
@@ -24,7 +26,7 @@
                 placeholder="Введите почту"
             />
             <textarea
-                id="1"
+                id="area"
                 class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl text-black w-full lg:h-80 h-64 resize-none outline-none border-none font-sans"
                 name="area"
                 required
