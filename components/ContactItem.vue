@@ -6,7 +6,7 @@
         <h2 class="lg:text-7xl text-4xl w-fit">Для быстрой связи со мной</h2>
         <form
             method="POST"
-            data-netlify="true"
+            netlify
             action="/server/contact.php"
             class="flex flex-col lg:gap-8 gap-4 items-center xl:w-1/4"
         >
