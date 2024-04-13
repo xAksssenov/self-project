@@ -14,6 +14,7 @@
             <input
                 v-model="name"
                 class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl w-full text-black font-sans"
+                name="name"
                 type="text"
                 required
                 placeholder="Введите имя"
@@ -21,6 +22,7 @@
             <input
                 v-model="email"
                 class="lg:px-10 px-5 lg:py-6 py-3 bg-white lg:text-4xl text-3xl rounded-3xl w-full text-black font-sans"
+                name="email"
                 type="email"
                 required
                 placeholder="Введите почту"
