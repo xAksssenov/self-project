@@ -6,8 +6,7 @@
         <h2 class="lg:text-7xl text-4xl w-fit">Для быстрой связи со мной</h2>
         <form
             method="POST"
-            netlify
-            action="/server/contact.php"
+            data-netlify="true"
             class="flex flex-col lg:gap-8 gap-4 items-center xl:w-1/4"
         >
             <input
@@ -31,17 +30,18 @@
                 required
                 placeholder="Введите текст"
             />
+            <button
+                class="lg:mx-4 mx-2 2xl:text-5xl 2xl:py-7 2xl:px-28 xl:text-4xl xl:py-6 xl:px-20 text-2xl py-4 px-12 rounded-full border-2 border-solid border-red-300 cursor-pointer transition-transform duration-500 ease transform hover:scale-110"
+                type="submit"
+                name="submit"
+            >
+                Отправить
+            </button>
         </form>
         <SvgoIconContact
             class="contact-svg absolute right-96 top-12 2xl:block hidden"
             filled
         />
-        <ButtonItem
-            class="lg:text-5xl text-3xl lg:py-7 py-3 lg:px-28 px-14"
-            type="submit"
-        >
-            Отправить
-        </ButtonItem>
     </div>
 </template>
 
